@@ -1,0 +1,81 @@
+.S1, .S2, .S3, .S4, #o7, #o8, #o10, #o11{
+   height: 20px;
+   width: 350px;
+background-color: black;
+color: aliceblue;
+}
+.S5, .S6{
+    height: 40px;
+    width: 250px;
+ background-color: black;
+ color: aliceblue;
+}
+#R4, #o5, #R5, #P4, #P5, #P6, #o6, #R6, #o7, #P8, #o8, #R8, #P9, #R9, #P10, #o10, #R10, #P11, #o11, #R11{
+    font-family: 'Times New Roman', Times, serif
+}
+#Q1{
+    height: 166px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q2{
+    height: 180px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q3{
+    height: 80px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q4{
+    height: 320px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q5{
+    height: 430px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q6{
+    height: 430px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q7{
+    height: 212px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q8{
+    height: 320px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q9{
+    height: 210px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q10{
+    height: 320px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}
+#Q11{
+    height: 320px;
+    width: 100%;
+    background-color: gold;
+    border: 2px solid black;
+}

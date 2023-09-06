@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="Q" id="Q1">
+    <h3>Q1.Create one function with zero parameter having a console statement;</h3>
+        <pre>
+            function print(){
+                console.log("This function contains a console statement");
+            }
+            print();                
+           <p class="S1"> o/p: This function contains a console statement </p> 
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q2">
+        <h3>Q2.Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</h3>
+        <pre>
+            function sum(a,b){
+                let c=a+b;
+                console.log("Sum of "+ a+","+b+" is "+c)
+            }
+            sum(3,4)
+            <p class="S2">o/p: Sum of 3,4 is 7</p>
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q3">
+        <h3>Q3.Create one arrow function</h3>
+        <pre class="S3">
+            let add = (x, y) => x + y;
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q4">
+        <h3><pre id="P4">Q4."Print output: 
+            var x = 21;
+            var girl = function () {
+                console.log(x);
+                var x = 20;
+            };
+            girl ();"
+        </pre></h3> <p class="S4">o/p: undefined </p> 
+           <pre id="R4">REASON: The output is undefined, because of 
+            i.  global scope : even though the x is declared at the top, it has global scope, which means it can be accessed anywhere except inside the function but we are having the console statement inside the 
+                function. Hence it cannot be accessed.
+            ii. Variable hoisting: The variable can be accessed even though it is initialized and declared after the console statement in the girl function. Here we can access only the variable but not it's value</pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q5">
+        <h3><pre id="P5">Q5."Print output: 
+            var x = 21;
+            girl ();
+            console.log(x)
+            function girl() {
+                console.log(x);
+                var x = 20;
+            };"</pre></h3>
+        <pre id="o5" class="S5">               o/p: undefined
+                      21</pre>
+                      <pre id="R5">REASON: First it will give undefined as output because the girl function is called before the console Statement. The girl function outputs undefined because of
+                                   i.  global scope : even though the x is declared at the top, it has global scope, which means it can be accessed anywhere except inside the function but we are having the console 
+                                         statement inside the function. Hence it cannot be accessed.
+                                   ii. Variable hoisting: The variable can be accessed even though it is initialized and declared after the console statement in the girl function. Here we can access only the variable but 
+                                        not it's value
+                                    
+                  And then it will print 21 as output because at first the x is initialized and declared  as x=21, which is global scope(means it's value can be accessed anywhere)
+                      </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q6">
+        <h3><pre id="P6">Q6."Print output
+            var x = 21;
+            a();
+            b();
+              function a() { 
+               x = 20;
+              console.log(x);
+            };
+             function b() {
+                x = 40;
+               console.log(x);
+            };"</pre></h3>
+        <pre id="o6" class="S6">           o/p: 20
+                  40 
+        </pre>
+        <pre id="R6">REASON:
+        Here the first output is 20, because the function a() is called at first in which the x is declared as x=20, and then we have used the console statement for printing x value.
+        Then the second output is 40, because the function b() is called after a(),  in b() the x is declared as x=40, and then we have used the console statement for printing x value.
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q7">
+        <h3>Q7.Write a function that accepts parameter n and returns factorial of n</h3>
+        <pre>function factorial(n){
+            let fact=1;
+            for(let i=1; i<=n; i++){
+                fact *=i;
+            }
+        console.log("The factorial of "+ n+ " is "+ fact)}
+        factorial(10);
+        </pre>
+        <pre id="o7">       o/p: The factorial of 10 is 3628800</pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q8">
+        <h3><pre id="P8">Day2   Q1 "Guess the Output
+            function FindSum(a, b){
+                return a + b;
+            }
+            function DisplayData(data, batch){
+                console.log(`i am from ${data} and My batch is EA${batch}`)
+            }
+            DisplayData(""PrepBytes"", FindSum(10, 9));"</pre></h3>
+        <pre id="o8"> o/p: i am from PrepBytes and My batch is EA19 </pre>
+        <pre id="R8">REASON:
+            The DisplayData function is passed with 2 parameters, the first parameter is "PrepBytes", so in the function ${data}= PrepBytes and 
+            Then the second parameter is FindSum(10,9) which means calling the function FindSum(a,b) so it has to return 10+9=19, hence ${batch} = 19,
+            so if we replace this 2 parameters in the console statement we get the final output.
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q9">
+        <h3><pre id="P9">DAY2  Q2. "Guess the output
+            Abc();
+            const Abc = function(){
+                let value = 20;
+                console.log(value);
+            }"</pre></h3>
+        <pre id="R9">This will generate an error :  ReferenceError: Cannot access 'Abc' before initialization
+            Here we cannot call the funnction which is not initialized before, hence we are generating with the error.
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q10">
+        <h3><pre id="P10">DAY2 Q3."Guess the output
+             var a = 10;
+            (function (){
+                console.log(a);
+                var a = 20;
+            })();"
+        </pre></h3>
+        <pre id="o10">o/p: undefined</pre>
+        <pre id="R10">REASON:
+            The output is undefined, because of 
+            i.  global scope : even though the a is declared at the top, it has global scope, which means it can be accessed anywhere except inside the function but we are having the console statement inside the 
+                function. Hence it cannot be accessed.
+            ii. Variable hoisting: The variable can be accessed even though it is initialized and declared after the console statement in the function. Here we can access only the variable but not it's value
+        </pre>
+    </div>
+    <br><br>
+    <div class="Q" id="Q11">
+        <h3><pre id="P11">DAY2 Q4."Guess the Output
+            const greet =  function(name){
+                return function(m){
+                    console.log(`Hi!! ${name}, ${m}`);
+                }
+            }
+            const greet_message = greet('EA19');
+            greet_message(""Welcome To PrepBytes"")"</pre></h3>
+        <pre id="o11">o/p: Hi!! EA19, Welcome To PrepBytes </pre>
+        <pre id="R11">REASON: Here the greet is declared as a function with parameter 'name', and inside that greet function we are returning a function with parametr 'm'
+            which consists of a console statement, and then we have declared a new constant greet_message as a function of greet with parameter "EA19", hence ${name} becomes EA19,
+             and now we have called  this greet_message function with parameter "Welcome to PrepBytes",  and ${m} becomes "Welcome to PrepBytes". 
+
+        </pre>
+    </div>
+</body>
+</html>
